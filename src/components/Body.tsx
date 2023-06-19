@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Editor from '@monaco-editor/react';
 import { Box, InputLabel, Select, MenuItem, FormControl, Paper, Tooltip, IconButton, SelectChangeEvent } from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Stack from '@mui/material/Stack';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
-import { borders } from '@mui/system';
 
 interface BodyProps {
   toggleDarkMode: () => void;
@@ -85,9 +84,9 @@ function Body({ toggleDarkMode, darkMode }: BodyProps) {
       </Box>
       <Stack sx={{ height: "calc(100% - 70px)" }} flexDirection="column" flexGrow={1}>
         {Array.from({ length: Number(numEditorRows) }).map((_, i) =>
-          <Grid2 sx={{ flex: 1 }} height={`${numEditorsPerRow == 2 ? "50%" : "100%"}`}>
+          <Grid2 sx={{ flex: 1 }} height={`${numEditorsPerRow === 2 ? "50%" : "100%"}`}>
             {Array.from({ length: Number(numEditorsPerRow) }).map((_, j) => (
-              <Grid2 key={`editor-${i * Number(numEditorsPerRow) + j}`} sx={{ height: '100%', border: 1, borderColor: 'grey.500' }} width={`${numEditorsPerRow == 2 ? "50%" : "100%"}`} display="inline-block">
+              <Grid2 key={`editor-${i * Number(numEditorsPerRow) + j}`} sx={{ height: '100%', border: 1, borderColor: 'grey.500' }} width={`${numEditorsPerRow ==- 2 ? "50%" : "100%"}`} display="inline-block">
                 <Editor
                   options={{
                     minimap: { enabled: false }, automaticLayout: true, glyphMargin: false, lineNumbersMinChars: 2, lineDecorationsWidth: 5 }}
