@@ -38,11 +38,6 @@ function Body({ toggleDarkMode, darkMode }: BodyProps) {
     setEditorLanguage(event.target.value);
   };
 
-  const handleEditorContentChange = (index: number, value: string) => {
-    const newContents = [];
-    newContents[index] = value;
-  };
-
   return (
     <Stack sx={{ padding: '15px 10px 10px', display: 'flex', flexDirection: 'column', height: "100vh" }} spacing="10px" flexGrow={1}>
       <Box sx={{ display: 'flex', gridGap: '10px' }}>
