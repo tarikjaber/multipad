@@ -111,7 +111,8 @@ function Body({ toggleDarkMode, darkMode }: BodyProps) {
                   language={editorLanguage}
                   //value={editorContents[i * numEditorsPerRow + j] || ''}
                   theme={darkMode ? 'vs-dark' : 'vs-light'}
-                  onChange={(value) => handleEditorContentChange(i * numEditorsPerRow + j, value || '')}
+                  defaultValue={localStorage.getItem(`editor-${i * 2 + j}`) || ''}
+                  onChange={(value) => localStorage.setItem(`editor-${i * 2 + j}`, value || '')}
                 />
               </Grid2>
             ))}
