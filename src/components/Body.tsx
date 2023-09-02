@@ -79,13 +79,16 @@ function Body({ toggleDarkMode, darkMode }: BodyProps) {
             <MenuItem value={'markdown'}>Markdown</MenuItem>
             <MenuItem value={'javascript'}>JavaScript</MenuItem>
             <MenuItem value={'typescript'}>TypeScript</MenuItem>
+            <MenuItem value={'json'}>JSON</MenuItem>
+            <MenuItem value={'CSS'}>CSS</MenuItem>
+            <MenuItem value={'SCSS'}>SCSS</MenuItem>
+            <MenuItem value={'html'}>HTML</MenuItem>
             <MenuItem value={'csharp'}>C#</MenuItem>
             <MenuItem value={'java'}>Java</MenuItem>
             <MenuItem value={'cpp'}>C++</MenuItem>
             <MenuItem value={'rust'}>Rust</MenuItem>
             <MenuItem value={'python'}>Python</MenuItem>
             <MenuItem value={'ruby'}>Ruby</MenuItem>
-            <MenuItem value={'html'}>HTML</MenuItem>
           </Select>
         </FormControl>
         <Tooltip title={darkMode ? "Switch to light mode" : "Switch to dark mode"}>
